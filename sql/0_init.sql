@@ -1,6 +1,6 @@
 -- Create companies table with primary key
 CREATE TABLE companies (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY NOT NULL,
   name TEXT,
   link TEXT,
   link_google TEXT,
@@ -9,15 +9,15 @@ CREATE TABLE companies (
 
 -- Create skills table with primary key
 CREATE TABLE skills (
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY NOT NULL,
   name TEXT,
   type TEXT
 );
 
 -- Create jobs table with primary key
 CREATE TABLE jobs (
-  id INT PRIMARY KEY,
-  company_id INT,
+  id SERIAL PRIMARY KEY NOT NULL,
+  company_id INT NOT NULL,
   job_title_short VARCHAR(255),
   job_title TEXT,
   job_location TEXT,
@@ -37,8 +37,8 @@ CREATE TABLE jobs (
 
 -- Create job_skills table with a composite primary key and foreign keys
 CREATE TABLE job_skills (
-  job_id INT,
-  skill_id INT,
+  job_id INT NOT NULL,
+  skill_id INT NOT NULL,
   PRIMARY KEY (job_id, skill_id),
   FOREIGN KEY (job_id) REFERENCES jobs (id),
   FOREIGN KEY (skill_id) REFERENCES skills (id)
