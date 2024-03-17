@@ -98,3 +98,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,dotenv,windows,linux
+
+
+### Custom ###
+# Init SQL file (mapped) in the dataset folder
+/dataset/init.sql
