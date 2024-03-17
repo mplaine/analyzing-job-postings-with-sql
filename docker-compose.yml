@@ -6,7 +6,7 @@ services:
     container_name: postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: job_postings
+      POSTGRES_DB: jobs
       POSTGRES_USER: data_analyst
       POSTGRES_PASSWORD: top_secret
     volumes:
