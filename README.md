@@ -22,9 +22,9 @@ There are 2,557 data science jobs in Finland.
 
 ## Dataset
 
-This project uses a modified version of the original [Job Postings in 2023](https://lukeb.co/sql_project_csvs) dataset from Luke Barousse's [SQL for Data Analytics](https://www.lukebarousse.com/sql) course. The [dataset](./dataset/) consists of four CSV files, each representing a table in the *Job Postings* database: companies (140,033 rows), job_skills (3,669,604 rows), jobs (787,686 rows), and skills (259 rows).
+This project uses a modified version of the original [Job Postings in 2023](https://lukeb.co/sql_project_csvs) dataset from Luke Barousse's [SQL for Data Analytics](https://www.lukebarousse.com/sql) course. The [dataset](./dataset/) consists of four CSV files, each representing a table in the *Job Postings* database: companies (140,033 rows), job_skills (3,669,604 rows), jobs (787,686 rows), and skills (256 rows).
 
-![ER diagram of the Job Postings database](./assets/job_postings_database_schema.png)
+![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
 *An ER diagram of the Job Postings database*
 
 
