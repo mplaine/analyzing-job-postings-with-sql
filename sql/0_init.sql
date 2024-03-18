@@ -1,7 +1,7 @@
 -- Create companies table with primary key
 CREATE TABLE companies (
   id SERIAL PRIMARY KEY NOT NULL,
-  name TEXT,
+  name TEXT UNIQUE,
   link TEXT,
   link_google TEXT,
   thumbnail TEXT
@@ -11,7 +11,8 @@ CREATE TABLE companies (
 CREATE TABLE skills (
   id SERIAL PRIMARY KEY NOT NULL,
   name TEXT,
-  type TEXT
+  type TEXT,
+  UNIQUE (name, type)
 );
 
 -- Create jobs table with primary key
