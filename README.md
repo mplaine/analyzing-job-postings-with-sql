@@ -17,7 +17,7 @@ There are 2,557 data science jobs in Finland.
 6. What are the most optimal skills to learn for Data Analysts and Data Engineers in ~~Finland~~ the world?
 
 
-**Tools:** [SQL](https://en.wikipedia.org/wiki/SQL), [PostgreSQL](https://www.postgresql.org/), [DrawSQL](https://drawsql.app/), [Visual Studio Code](https://code.visualstudio.com/) (with [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension), [Docker Compose](https://docs.docker.com/compose/), [git](https://git-scm.com/), [GitHub](https://github.com/)
+**Tools:** [SQL](https://en.wikipedia.org/wiki/SQL), [PostgreSQL](https://www.postgresql.org/), [DrawSQL](https://drawsql.app/), [Visual Studio Code](https://code.visualstudio.com/) (with [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension), [Tableau](https://www.tableau.com/), [Docker Compose](https://docs.docker.com/compose/), [git](https://git-scm.com/), [GitHub](https://github.com/)
 
 
 ## Dataset
@@ -25,7 +25,8 @@ There are 2,557 data science jobs in Finland.
 This project uses a modified version of the original [Job Postings in 2023](https://lukeb.co/sql_project_csvs) dataset from Luke Barousse's [SQL for Data Analytics](https://www.lukebarousse.com/sql) course. The [dataset](./dataset/) consists of four CSV files, each representing a table in the *Job Postings* database: companies (140,033 rows), job_skills (3,669,604 rows), jobs (787,686 rows), and skills (256 rows).
 
 ![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
-*An ER diagram of the Job Postings database*
+
+*Figure: An ER diagram of the Job Postings database*
 
 
 ## Analysis
@@ -48,6 +49,11 @@ LIMIT
   10;
 ```
 
+![Top 10 locations with data science jobs in Finland, 2023](./results/viz/1_cities.png)
+
+*Figure: Top 10 locations with data science jobs in Finland, 2023*
+
+<!--
 | Location           | Job Count |
 | :----------------- | --------: |
 | Helsinki, Finland  |     1,345 |
@@ -60,6 +66,7 @@ LIMIT
 | Vantaa, Finland    |        29 |
 | Jyväskylä, Finland |        17 |
 | Lahti, Finland     |        11 |
+-->
 
 
 ### 2. Which companies recruit the most data science employees in Finland?
@@ -82,6 +89,11 @@ LIMIT
   25;
 ```
 
+![Top 25 companies recruiting data science employees in Finland, 2023](./results/viz/2_companies.png)
+
+*Figure: Top 25 companies recruiting data science employees in Finland, 2023*
+
+<!--
 | Company                           | Job Count |
 | :-------------------------------- | --------: |
 | Wolt                              |       105 |
@@ -109,6 +121,7 @@ LIMIT
 | Gofore                            |        14 |
 | Metacore                          |        14 |
 | Nokia                             |        14 |
+-->
 
 
 ### 3. What are the most in-demand data science jobs in Finland?
@@ -127,6 +140,11 @@ ORDER BY
   job_count DESC;
 ```
 
+![Data science job roles by demand in Finland, 2023](./results/viz/3_roles.png)
+
+*Figure: Data science job roles by demand in Finland, 2023*
+
+<!--
 | Role                      | Job Count |
 | :------------------------ | --------: |
 | Data Engineer             |       699 |
@@ -139,6 +157,7 @@ ORDER BY
 | Cloud Engineer            |       107 |
 | Machine Learning Engineer |        94 |
 | Senior Data Analyst       |        70 |
+-->
 
 
 ### 4. What are the highest-paying data science jobs in ~~Finland~~ the world?
@@ -161,6 +180,11 @@ ORDER BY
   average_salary DESC;
 ```
 
+![Highest-paying data science job roles worldwide, 2023](./results/viz/4_salaries.png)
+
+*Figure: Highest-paying data science job roles worldwide, 2023*
+
+<!--
 | Role                      | Job Count | Average Salary ($) | Min Salary ($) | Max Salary ($) |
 | :------------------------ | --------: | -----------------: | -------------: | -------------: |
 | Senior Data Scientist     |     1,686 |            154,050 |         45,000 |        890,000 |
@@ -173,6 +197,7 @@ ORDER BY
 | Cloud Engineer            |        65 |            111,268 |         42,000 |        280,000 |
 | Data Analyst              |     5,463 |             93,876 |         25,000 |        650,000 |
 | Business Analyst          |       617 |             91,071 |         16,500 |        387,460 |
+-->
 
 
 ### 5. What are the most in-demand skills for Data Analysts and Data Engineers in Finland?
@@ -199,6 +224,11 @@ LIMIT
   10;
 ```
 
+![Top 10 in-demand skills for Data Analysts and Data Engineers in Finland, 2023](./results/viz/5_skills.png)
+
+*Figure: Top 10 in-demand skills for Data Analysts and Data Engineers in Finland, 2023*
+
+<!--
 | Skill      | Type          | Job Count |
 | :--------- | :------------ | --------: |
 | sql        | programming   |       584 |
@@ -211,6 +241,7 @@ LIMIT
 | tableau    | analyst_tools |       150 |
 | spark      | libraries     |       145 |
 | kafka      | libraries     |       129 |
+-->
 
 
 ### 6. What are the most optimal skills to learn for Data Analysts and Data Engineers in ~~Finland~~ the world?
@@ -242,6 +273,11 @@ LIMIT
   10;
 ```
 
+![Top 10 optimal skills for Data Analysts and Data Engineers worldwide, 2023](./results/viz/6_optimal_skills.png)
+
+*Figure: Top 10 optimal skills for Data Analysts and Data Engineers worldwide, 2023*
+
+<!--
 | Skill     | Type        | Job Count | Average Salary ($) |
 | --------- | ----------- | --------- | ------------------ |
 | kafka     | libraries   |       912 |            142,512 |
@@ -254,6 +290,7 @@ LIMIT
 | snowflake | cloud       |     1,313 |            132,681 |
 | hadoop    | libraries   |       979 |            132,134 |
 | aws       | cloud       |     2,291 |            130,563 |
+-->
 
 
 ## Conclusions
