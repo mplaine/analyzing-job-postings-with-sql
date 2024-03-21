@@ -12,7 +12,7 @@ WHERE
   job_country = 'Finland' AND
   job_title_short in ('Data Analyst', 'Data Engineer')
 GROUP BY
-  type, name
+  s.id
 ORDER BY
   job_count DESC
 LIMIT

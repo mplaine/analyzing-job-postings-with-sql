@@ -22,11 +22,9 @@ There are 2,557 data science jobs in Finland.
 
 ## Dataset
 
-This project uses a modified version of the original [Job Postings in 2023](https://lukeb.co/sql_project_csvs) dataset from Luke Barousse's [SQL for Data Analytics](https://www.lukebarousse.com/sql) course. The [dataset](./dataset/) consists of four CSV files, each representing a table in the *Job Postings* database: companies (140,033 rows), job_skills (3,669,604 rows), jobs (787,686 rows), and skills (256 rows).
+This project uses a modified version of the original [Job Postings in 2023](https://lukeb.co/sql_project_csvs) dataset from Luke Barousse's [SQL for Data Analytics](https://www.lukebarousse.com/sql) course. The [dataset](./dataset/) consists of four CSV files, each representing a table in the *Job Postings* database (see the ER diagram below): companies (140,033 rows), job_skills (3,669,604 rows), jobs (787,686 rows), and skills (256 rows).
 
 ![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
-
-*Figure: An ER diagram of the Job Postings database*
 
 
 ## Analysis
@@ -51,15 +49,7 @@ LIMIT
   10;
 ```
 
-Key insights:
-
-- **Helsinki** dominates the data science job market in Finland with 1,345 job postings, reflecting its status as the country's capital and major economic hub.
-- **Espoo** and **Tampere**, the second and third largest cities in Finland, feature 241 and 110 job postings, respectively. Both cities have a university of technology, which likely increases the number of tech companies and the demand for data professionals in the region.
-- Data science job opportunies are also abundant in smaller cities around the country, exemplified by **Oulu** (43), **Jyväskylä** (17), and **Lahti** (11), as well as through **remote positions (Anywhere)**, accounting for 195 job postings.
-
 ![Top 10 locations with data science jobs in Finland, 2023](./results/viz/1_cities.png)
-
-*Figure: Top 10 locations with data science jobs in Finland, 2023*
 
 <!--
 | Location           | Job Count |
@@ -75,6 +65,12 @@ Key insights:
 | Jyväskylä, Finland |        17 |
 | Lahti, Finland     |        11 |
 -->
+
+Insights:
+
+- **Helsinki** dominates the data science job market in Finland with 1,345 job postings, reflecting its status as the country's capital and major economic hub.
+- **Espoo** and **Tampere**, the second and third largest cities in Finland, feature 241 and 110 job postings, respectively. Both cities have a university of technology, which likely increases the number of tech companies and the demand for data professionals in the region.
+- Data science job opportunies are also abundant in smaller cities around the country, exemplified by **Oulu** (43), **Jyväskylä** (17), and **Lahti** (11), as well as through **remote positions (Anywhere)**, accounting for 195 job postings.
 
 
 ### 2. Which companies recruit the most data professionals in Finland?
@@ -99,15 +95,7 @@ LIMIT
   25;
 ```
 
-Key insights:
-
-- **Wolt** leads with 155 job postings, signaling its strong emphasis on data-driven decision-making in the food delivery industry.
-- Technology recruitment companies such as **Nigel Frank International** (109), **Technojobs** (46), and **Academic Work** (22) are heavily represented on the list, indicating a rising demand for data professionals across various sectors.
-- Financial institutions like **Nordea Bank** (95) and **OP Financial Group** (26) actively seek data professionals, highlighting the ever-growing role of data analytics in the banking and finance sectors.
-
 ![Top 25 companies recruiting data professionals in Finland, 2023](./results/viz/2_companies.png)
-
-*Figure: Top 25 companies recruiting data professionals in Finland, 2023*
 
 <!--
 | Company                           | Job Count |
@@ -139,6 +127,12 @@ Key insights:
 | Nokia                             |        14 |
 -->
 
+Insights:
+
+- **Wolt** leads with 155 job postings, signaling its strong emphasis on data-driven decision-making in the food delivery industry.
+- Technology recruitment companies such as **Nigel Frank International** (109), **Technojobs** (46), and **Academic Work** (22) are heavily represented on the list, indicating a rising demand for data professionals across various sectors.
+- Financial institutions like **Nordea Bank** (95) and **OP Financial Group** (26) actively seek data professionals, highlighting the ever-growing role of data analytics in the banking and finance sectors.
+
 
 ### 3. What are the most in-demand data science job roles in Finland?
 
@@ -158,15 +152,7 @@ ORDER BY
   job_count DESC;
 ```
 
-Key insights:
-
-- **(Senior) Data Engineer** roles are the most in-demand in Finland, with 870 job postings, indicating that there is a high demand for data professionals to build and maintain automated data processing pipelines and data storage systems within organizations.
-- **(Senior) Data Analyst** and **(Senior) Data Scientist** positions are also highly sought-after, with 460 and 458 job postings respectively, suggesting a growing need for professionals skilled in data analysis and advanced data modeling techniques.
-- **Software Engineer** roles follow closely behind, with 397 job postings, highlighting the intersection of software development and data science in the Finnish job market.
-
 ![Data science job roles by demand in Finland, 2023](./results/viz/3_roles.png)
-
-*Figure: Data science job roles by demand in Finland, 2023*
 
 <!--
 | Role                      | Job Count |
@@ -183,10 +169,16 @@ Key insights:
 | Senior Data Analyst       |        70 |
 -->
 
+Insights:
+
+- **(Senior) Data Engineer** roles are the most in-demand in Finland, with 870 job postings, indicating that there is a high demand for data professionals to build and maintain automated data processing pipelines and data storage systems within organizations.
+- **(Senior) Data Analyst** and **(Senior) Data Scientist** positions are also highly sought-after, with 460 and 458 job postings respectively, suggesting a growing need for professionals skilled in data analysis and advanced data modeling techniques.
+- **Software Engineer** roles follow closely behind, with 397 job postings, highlighting the intersection of software development and data science in the Finnish job market.
+
 
 ### 4. What are the highest-paying data science job roles in ~~Finland~~ the world?
 
-To identify the highest-paying job roles in ~~Finland~~ the world<sup>*</sup>, I grouped jobs with salary information by role and then computed their average yearly salary.
+To identify the highest-paying job roles in [~~Finland~~](## "Unfortunately, the dataset had only limited data points available for Finland.") the world, I grouped jobs having salary information by role and then computed their average yearly salary.
 
 ```sql
 SELECT
@@ -206,14 +198,7 @@ ORDER BY
   average_salary DESC;
 ```
 
-Key insights:
-
-- **Experience:** Senior-level Data Scientists ($154K), Data Engineers ($146K), and Data Analysts ($114K) enjoy average yearly salaries that are 12-21% higher than those of their less seasoned peers, underscoring the importance of experience and skills in data science.
-- **Skills:** Roles demanding a diverse set of skills, such as Data Scientist, Data Engineer, and Machine Learning Engineer are generally associated with higher annual salaries.
-
 ![Highest-paying data science job roles worldwide, 2023](./results/viz/4_salaries.png)
-
-*Figure: Highest-paying data science job roles worldwide, 2023*
 
 <!--
 | Role                      | Job Count | Average Salary ($) | Min Salary ($) | Max Salary ($) |
@@ -230,10 +215,15 @@ Key insights:
 | Business Analyst          |       617 |             91,071 |         16,500 |        387,460 |
 -->
 
-<sup>*</sup>Unfortunately, the dataset had only limited data points available for Finland.
+Insights:
+
+- **Experience:** Senior-level Data Scientists ($154K), Data Engineers ($146K), and Data Analysts ($114K) enjoy average yearly salaries that are 12-21% higher than those of their less seasoned peers, underscoring the importance of experience and skills in data science.
+- **Skills:** Roles demanding a diverse set of skills, such as Data Scientist, Data Engineer, and Machine Learning Engineer are generally associated with higher annual salaries.
 
 
 ### 5. What are the most in-demand skills for Data Analysts and Data Engineers in Finland?
+
+To identify the most in-demand skills for Data Analysts and Data Engineers in Finland, I joined jobs with the associated skills data and then filtered them by country and role, and finally grouped skills by their id.
 
 ```sql
 SELECT
@@ -250,7 +240,7 @@ WHERE
   job_country = 'Finland' AND
   job_title_short in ('Data Analyst', 'Data Engineer')
 GROUP BY
-  type, name
+  s.id
 ORDER BY
   job_count DESC
 LIMIT
@@ -258,8 +248,6 @@ LIMIT
 ```
 
 ![Top 10 in-demand skills for Data Analysts and Data Engineers in Finland, 2023](./results/viz/5_skills.png)
-
-*Figure: Top 10 in-demand skills for Data Analysts and Data Engineers in Finland, 2023*
 
 <!--
 | Skill      | Type          | Job Count |
@@ -276,8 +264,17 @@ LIMIT
 | kafka      | libraries     |       129 |
 -->
 
+Insights:
+
+- **Programming:** SQL and Python top the list, with 584 and 537 job postings respectively, highlighting the importance of programming proficiency in both Data Analyst and Data Engineer roles.
+- **Cloud:** Cloud-related skills such as Azure, AWS, and Snowflake are in high demand, with 383, 273, and 186 job postings respectively, indicating a growing reliance on cloud-based data solutions and infrastructure among Finnish companies.
+- **Analyst tools:** Mastering tools like Power BI (231) and Tableau (150) are essential especially for Data Analysts, suggesting a strong emphasis on data visualization for effective analysis and decision-making.
+- **Libraries:** Open-source libraries such as Apache Spark and Apache Kafka are also notable, with 145 and 129 job postings respectively, underscoring the importance of these technologies for data processing and streaming tasks among Data Engineers in Finland.
+
 
 ### 6. What are the most optimal skills to learn for Data Analysts and Data Engineers in ~~Finland~~ the world?
+
+To identify the most optimal skills to learn for Data Analysts and Data Engineers in [~~Finland~~](## "Unfortunately, the dataset had only limited data points available for Finland.") the world, I joined jobs having salary information with the associated skills data and then filtered them by role, and finally grouped popular skills by their id.
 
 ```sql
 SELECT
@@ -296,7 +293,7 @@ WHERE
   job_title_short in ('Data Analyst', 'Data Engineer') AND
   salary_year_avg IS NOT NULL
 GROUP BY
-  type, name
+  s.id
 HAVING
   COUNT(*) > 500
 ORDER BY
@@ -307,8 +304,6 @@ LIMIT
 ```
 
 ![Top 10 optimal skills for Data Analysts and Data Engineers worldwide, 2023](./results/viz/6_optimal_skills.png)
-
-*Figure: Top 10 optimal skills for Data Analysts and Data Engineers worldwide, 2023*
 
 <!--
 | Skill     | Type        | Job Count | Average Salary ($) |
@@ -325,7 +320,11 @@ LIMIT
 | aws       | cloud       |     2,291 |            130,563 |
 -->
 
-<sup>*</sup>Unfortunately, the dataset had only limited data points available for Finland.
+Insights:
+
+- **Programming:** Proficiency in less popular programming languages for data science such as Scala and Java show significant demand, which is reflected in their relatively higher average yearly salaries reaching up to $141K and $133K, respectively.
+- **Cloud:** Skills related to cloud platforms and services like Redshift, Snowflake, and AWS are in high demand, offering lucrative average yearly salaries ranging from $131K to $136K.
+- **Libraries:** Mastery of Apache Kafka ($143K), Airflow ($135K), Spark ($134K), and Hadoop ($132K) is also highly valued, highlighting their significance in data engineering roles worldwide.
 
 
 ## Conclusions

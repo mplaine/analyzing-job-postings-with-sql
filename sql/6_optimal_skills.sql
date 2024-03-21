@@ -14,7 +14,7 @@ WHERE
   job_title_short in ('Data Analyst', 'Data Engineer') AND
   salary_year_avg IS NOT NULL
 GROUP BY
-  type, name
+  s.id
 HAVING
   COUNT(*) > 500
 ORDER BY
