@@ -27,7 +27,7 @@ This project uses a modified version of the original [Job Postings in 2023](http
 ![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
 
 
-## Analysis
+## Data Analysis
 
 ### 1. Which cities have the most data science jobs in Finland?
 
@@ -70,7 +70,7 @@ Insights:
 
 - **Helsinki** dominates the data science job market in Finland with 1,345 job postings, reflecting its status as the country's capital and major economic hub.
 - **Espoo** and **Tampere**, the second and third largest cities in Finland, feature 241 and 110 job postings, respectively. Both cities have a university of technology, which likely increases the number of tech companies and the demand for data professionals in the region.
-- Data science job opportunies are also abundant in smaller cities around the country, exemplified by **Oulu** (43), **Jyväskylä** (17), and **Lahti** (11), as well as through **remote positions (Anywhere)**, accounting for 195 job postings.
+- Data science job opportunies are also abundant in smaller cities across the country, exemplified by **Oulu** (43), **Jyväskylä** (17), and **Lahti** (11), as well as through **remote positions (Anywhere)**, accounting for 195 job postings.
 
 
 ### 2. Which companies recruit the most data professionals in Finland?
@@ -217,8 +217,8 @@ ORDER BY
 
 Insights:
 
-- **Experience:** Senior-level Data Scientists ($154K), Data Engineers ($146K), and Data Analysts ($114K) enjoy average yearly salaries that are 12-21% higher than those of their less seasoned peers, underscoring the importance of experience and skills in data science.
-- **Skills:** Roles demanding a diverse set of skills, such as Data Scientist, Data Engineer, and Machine Learning Engineer are generally associated with higher annual salaries.
+- **Experience:** Senior-level Data Scientists ($154K), Data Engineers ($146K), and Data Analysts ($114K) enjoy average yearly salaries that are 12-21% higher than those of their less seasoned peers, underscoring the importance of experience in data science.
+- **Skills:** Roles demanding a diverse set of skills such as Data Scientist, Data Engineer, and Machine Learning Engineer are generally associated with higher annual salaries.
 
 
 ### 5. What are the most in-demand skills for Data Analysts and Data Engineers in Finland?
@@ -269,7 +269,7 @@ Insights:
 - **Programming:** SQL and Python top the list, with 584 and 537 job postings respectively, highlighting the importance of programming proficiency in both Data Analyst and Data Engineer roles.
 - **Cloud:** Cloud-related skills such as Azure, AWS, and Snowflake are in high demand, with 383, 273, and 186 job postings respectively, indicating a growing reliance on cloud-based data solutions and infrastructure among Finnish companies.
 - **Analyst tools:** Mastering tools like Power BI (231) and Tableau (150) are essential especially for Data Analysts, suggesting a strong emphasis on data visualization for effective analysis and decision-making.
-- **Libraries:** Open-source libraries such as Apache Spark and Apache Kafka are also notable, with 145 and 129 job postings respectively, underscoring the importance of these technologies for data processing and streaming tasks among Data Engineers in Finland.
+- **Libraries:** Open-source libraries such as Apache Spark and Apache Kafka are featured prominently, with 145 and 129 job postings respectively, underscoring their vital roles in data processing and streaming tasks for Data Engineers in Finland.
 
 
 ### 6. What are the most optimal skills to learn for Data Analysts and Data Engineers in ~~Finland~~ the world?
@@ -331,7 +331,7 @@ Insights:
 
 In 2023, a total of 2,557 data science job postings were published in Finland. The following summarizes the insights derived from the data analysis:
 
-1. **Largest data science hubs:** Large cities like Helsinki, Tampere, and Espoo boast with many data science job opportunities, but smaller cities such as Jyväskylä and Lahti also offer considerable employment opportunities in the field in addition to remote positions.
+1. **Largest data science hubs:** Large cities like Helsinki, Tampere, and Espoo boast with many data science job opportunities, but smaller cities such as Jyväskylä and Lahti also offer good employment opportunities in the field in addition to remote positions.
 2. **Biggest recruiters:** Wolt is Finland's biggest recruiter in the field of data science with 155 job postings, followed by major technology recruitment firms, financial institutions, and tech companies.
 3. **Most in-demand roles:** In Finland, the most in-demand roles include (Senior) Data Engineer, (Senior) Data Analyst, (Senior) Data Scientist, and Software Engineer, suggesting a growing need for data professionals capable of working at the intersection of data science and software development.
 4. **Highest-paying roles:** Experienced data professionals, such as Senior-level Data Scientists and Data Engineers, enjoy higher average yearly salaries, reflecting the value placed on both experience and diverse skills in the *global* job market.
@@ -339,3 +339,34 @@ In 2023, a total of 2,557 data science job postings were published in Finland. T
 6. **Most optimal skills:** Proficiency in Scala and Java programming languages commands high salaries in the *global* job market, as do cloud skills like Redshift, Snowflake, and AWS, along with mastery of various Apache libraries for data engineering.
 
 In summary, the Finnish job market for data science looks very promising, with large urban centers serving as hubs for opportunities. Wolt emerges as a major player in recruitment, while demand remains high for experienced data professionals adept in diverse skills and technologies.
+
+
+## Database Setup Guide
+
+### Prerequisites
+
+* [Docker](https://docs.docker.com/)
+
+
+### Usage
+
+To start a PostgreSQL database service with the job postings data, run:
+
+```bash
+docker compose up
+```
+
+> **Note:** The database initialization process takes several minutes due to the large amount of data.
+
+To stop and remove the database service, just hit `Ctrl+C` and run:
+
+```bash
+docker compose down
+```
+
+
+## License
+
+Copyright (c) 2024 [Markku Laine](https://markkulaine.com)
+
+This software is distributed under the terms of the [MIT License](https://opensource.org/license/mit/). See [LICENSE](./LICENSE) for details.
