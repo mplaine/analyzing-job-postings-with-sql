@@ -5,9 +5,9 @@
 
 ## Overview
 
-There are 2,557 data science jobs in Finland.
+The goal of this project is to explore the data science job market in Finland by analyzing job postings published in 2023 using SQL.
 
-**Questions:**
+**The questions I wanted answers to are:**
 
 1. Which cities have the most data science jobs in Finland?
 2. Which companies recruit the most data professionals in Finland?
@@ -27,7 +27,7 @@ This project uses a modified version of the original [Job Postings in 2023](http
 ![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
 
 
-## Data Analysis
+## Analysis
 
 ### 1. Which cities have the most data science jobs in Finland?
 
