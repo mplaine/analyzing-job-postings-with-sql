@@ -10,11 +10,11 @@ There are 2,557 data science jobs in Finland.
 **Questions:**
 
 1. Which cities have the most data science jobs in Finland?
-2. Which companies recruit the most data science employees in Finland?
-3. What are the most in-demand data science jobs in Finland?
-4. What are the highest-paying data science jobs in ~~Finland~~ the world?
+2. Which companies recruit the most data professionals in Finland?
+3. What are the most in-demand data science job roles in Finland?
+4. What are the highest-paying data science job roles in [~~Finland~~](## "Unfortunately, the dataset had only limited data points available for Finland.") the world?
 5. What are the most in-demand skills for Data Analysts and Data Engineers in Finland?
-6. What are the most optimal skills to learn for Data Analysts and Data Engineers in ~~Finland~~ the world?
+6. What are the most optimal skills to learn for Data Analysts and Data Engineers in [~~Finland~~](## "Unfortunately, the dataset had only limited data points available for Finland.") the world?
 
 
 **Tools:** [SQL](https://en.wikipedia.org/wiki/SQL), [PostgreSQL](https://www.postgresql.org/), [DrawSQL](https://drawsql.app/), [Visual Studio Code](https://code.visualstudio.com/) (with [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) extension), [Tableau](https://www.tableau.com/), [Docker Compose](https://docs.docker.com/compose/), [git](https://git-scm.com/), [GitHub](https://github.com/)
@@ -27,7 +27,7 @@ This project uses a modified version of the original [Job Postings in 2023](http
 ![ER diagram of the Job Postings database](./assets/job_postings_database_diagram.png)
 
 
-## Analysis
+## Data Analysis
 
 ### 1. Which cities have the most data science jobs in Finland?
 
@@ -329,4 +329,13 @@ Insights:
 
 ## Conclusions
 
-Todo
+In 2023, a total of 2,557 data science job postings were published in Finland. The following summarizes the insights derived from the data analysis:
+
+1. **Largest data science hubs:** Large cities like Helsinki, Tampere, and Espoo boast with many data science job opportunities, but smaller cities such as Jyväskylä and Lahti also offer considerable employment opportunities in the field in addition to remote positions.
+2. **Biggest recruiters:** Wolt is Finland's biggest recruiter in the field of data science with 155 job postings, followed by major technology recruitment firms, financial institutions, and tech companies.
+3. **Most in-demand roles:** In Finland, the most in-demand roles include (Senior) Data Engineer, (Senior) Data Analyst, (Senior) Data Scientist, and Software Engineer, suggesting a growing need for data professionals capable of working at the intersection of data science and software development.
+4. **Highest-paying roles:** Experienced data professionals, such as Senior-level Data Scientists and Data Engineers, enjoy higher average yearly salaries, reflecting the value placed on both experience and diverse skills in the *global* job market.
+5. **Most in-demand skills:** In Finland, SQL and Python proficiency is crucial for Data Analyst and Data Engineer roles, while demand for cloud skills like Azure and AWS is rising, alongside essential data analytics tools and libraries, such as Power BI and Apache Spark.
+6. **Most optimal skills:** Proficiency in Scala and Java programming languages commands high salaries in the *global* job market, as do cloud skills like Redshift, Snowflake, and AWS, along with mastery of various Apache libraries for data engineering.
+
+In summary, the Finnish job market for data science looks very promising, with large urban centers serving as hubs for opportunities. Wolt emerges as a major player in recruitment, while demand remains high for experienced data professionals adept in diverse skills and technologies.
